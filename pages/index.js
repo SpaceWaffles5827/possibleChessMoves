@@ -16,34 +16,22 @@ export default function Home() {
   const [boardData, setBoardData] = useState(deafultBoard);
 
   function resetBoardTileColors(){
-    console.log('resetBoardTileColors');
-    const newBoard = boardData.map((row, rowIndex) => {
-      return row.map((tile, tileIndex) => {
-        const position = [rowIndex, tileIndex];
-        if ((rowIndex + tileIndex) % 2 === 0){
-          return {TileC: 'white', Piece: tile.Piece}
-        } else {
-          return {TileC: 'black', Piece: tile.Piece}
-        }
-      })
-    })
-    setBoardData(newBoard);
+    let newBoard = [...boardData];
+    boardData.forEach((row, rowIndex) => {
+      row.forEach((tile, tileIndex) => {
+        newBoard[rowIndex][tileIndex].TileC = (rowIndex + tileIndex) % 2 === 0 ? 'white' : 'black';
+      });
+    }
+    );
   }
 
   function possibleMoves(position, piece){
     resetBoardTileColors();
     if(piece === 'p'){
       const possibleMove = [position[0] - 1, position[1]]
-      const newBoardData = boardData.map((row, rowIndex) => {
-        return row.map((tile, tileIndex) => {
-          if(rowIndex === possibleMove[0] && tileIndex === possibleMove[1]){
-            return {TileC: 'green', Piece: null}
-          } else {
-            return tile
-          }
-        })
-      })
-      setBoardData(newBoardData)
+      const updatedBoard = [...boardData]
+      updatedBoard[possibleMove[0]][possibleMove[1]].TileC = 'green'
+      setBoardData(updatedBoard)
     }
   }
   
