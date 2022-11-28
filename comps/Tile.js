@@ -7,8 +7,20 @@ import { useState } from 'react';
 
 export default function Tile({value, position, selectPiece}) {
 
+    function getTileColr(){
+        if(value && value.moveable){
+            return 'green';
+        }else{
+            return value.TileC;
+        }
+    }
+
+    function handleClick(){
+    }
+
     return (
-        <div className={styles.Tile} style={{backgroundColor: value.TileC}}>
+        <div onClick={() => handleClick()} className={styles.Tile} style={{backgroundColor: getTileColr()}}>
+            {console.log(value.moveable)}
             <ChessPiece selectPiece={selectPiece} position={position} value={value}></ChessPiece>
         </div>
     )
