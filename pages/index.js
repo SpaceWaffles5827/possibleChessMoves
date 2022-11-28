@@ -4,14 +4,14 @@ import { useState } from 'react'
 
 export default function Home() {
 
-  const deafultBoard = ([[{TileC: '#EEEED2', Piece: 'r'}, {TileC: '#769656', Piece: 'n'}, {TileC: '#EEEED2', Piece: 'b'}, {TileC: '#769656', Piece: 'k'}, {TileC: '#EEEED2', Piece: 'q'}, {TileC: '#769656', Piece: 'b'}, {TileC: '#EEEED2', Piece: 'n'}, {TileC: '#769656', Piece: 'r'}],
-  [{TileC: '#769656', Piece: 'p'}, {TileC: '#EEEED2', Piece: 'p'}, {TileC: '#769656', Piece: 'p'}, {TileC: '#EEEED2', Piece: 'p'}, {TileC: '#769656', Piece: 'p'}, {TileC: '#EEEED2', Piece: 'p'}, {TileC: '#769656', Piece: 'p'}, {TileC: '#EEEED2', Piece: 'p'}],
-  [{TileC: '#EEEED2', Piece: null}, {TileC: '#769656', Piece: null}, {TileC: '#EEEED2', Piece: null}, {TileC: '#769656', Piece: null}, {TileC: '#EEEED2', Piece: null}, {TileC: '#769656', Piece: null}, {TileC: '#EEEED2', Piece: null}, {TileC: '#769656', Piece: null}],
-  [{TileC: '#769656', Piece: null}, {TileC: '#EEEED2', Piece: null}, {TileC: '#769656', Piece: null}, {TileC: '#EEEED2', Piece: null}, {TileC: '#769656', Piece: null}, {TileC: '#EEEED2', Piece: null}, {TileC: '#769656', Piece: null}, {TileC: '#EEEED2', Piece: null}],
-  [{TileC: '#EEEED2', Piece: null}, {TileC: '#769656', Piece: null}, {TileC: '#EEEED2', Piece: null}, {TileC: '#769656', Piece: null}, {TileC: '#EEEED2', Piece: null}, {TileC: '#769656', Piece: null}, {TileC: '#EEEED2', Piece: null}, {TileC: '#769656', Piece: null}],
-  [{TileC: '#769656', Piece: null}, {TileC: '#EEEED2', Piece: null}, {TileC: '#769656', Piece: null}, {TileC: '#EEEED2', Piece: null}, {TileC: '#769656', Piece: null}, {TileC: '#EEEED2', Piece: null}, {TileC: '#769656', Piece: null}, {TileC: '#EEEED2', Piece: null}],
-  [{TileC: '#EEEED2', Piece: 'p'}, {TileC: '#769656', Piece: 'p'}, {TileC: '#EEEED2', Piece: 'p'}, {TileC: '#769656', Piece: 'p'}, {TileC: '#EEEED2', Piece: 'p'}, {TileC: '#769656', Piece: 'p'}, {TileC: '#EEEED2', Piece: 'p'}, {TileC: '#769656', Piece: 'p'}],
-  [{TileC: '#769656', Piece: 'r'}, {TileC: '#EEEED2', Piece: 'n'}, {TileC: '#769656', Piece: 'b'}, {TileC: '#EEEED2', Piece: 'q'}, {TileC: '#769656', Piece: 'k'}, {TileC: '#EEEED2', Piece: 'b'}, {TileC: '#769656', Piece: 'n'}, {TileC: '#EEEED2', Piece: 'r'}]]);
+  const deafultBoard =([[{TileC: '#EEEED2', Piece: {Id: '', StartPosition: [0,0], color: null}}, {TileC: '#769656', Piece: {Id: '', StartPosition: [0,0], color: null}}, {TileC: '#EEEED2', Piece: {Id: '', StartPosition: [0,0], color: null}}, {TileC: '#769656', Piece: {Id: '', StartPosition: [0,0], color: null}}, {TileC: '#EEEED2', Piece: {Id: '', StartPosition: [0,0], color: null}}, {TileC: '#769656', Piece: {Id: '', StartPosition: [0,0], color: null}}, {TileC: '#EEEED2', Piece: {Id: '', StartPosition: [0,0], color: null}}, {TileC: '#769656', Piece: {Id: '', StartPosition: [0,0], color: null}}],
+                        [{TileC: '#769656', Piece: {Id: 'p', StartPosition: [0,0], color: 'black'}}, {TileC: '#EEEED2', Piece: {Id: 'p', StartPosition: [0,0], color: 'black'}}, {TileC: '#769656', Piece: {Id: 'p', StartPosition: [0,0], color: 'black'}}, {TileC: '#EEEED2', Piece: {Id: 'p', StartPosition: [0,0], color: 'black'}}, {TileC: '#769656', Piece: {Id: 'p', StartPosition: [0,0], color: 'black'}}, {TileC: '#EEEED2', Piece: {Id: 'p', StartPosition: [0,0], color: 'black'}}, {TileC: '#769656', Piece: {Id: 'p', StartPosition: [0,0], color: 'black'}}, {TileC: '#EEEED2', Piece: {Id: 'p', StartPosition: [0,0], color: 'black'}}],
+                        [{TileC: '#EEEED2', Piece: {Id: '', StartPosition: [0,0], color: null}}, {TileC: '#769656', Piece: {Id: '', StartPosition: [0,0], color: null}}, {TileC: '#EEEED2', Piece: {Id: '', StartPosition: [0,0], color: null}}, {TileC: '#769656', Piece: {Id: '', StartPosition: [0,0], color: null}}, {TileC: '#EEEED2', Piece: {Id: '', StartPosition: [0,0], color: null}}, {TileC: '#769656', Piece: {Id: '', StartPosition: [0,0], color: null}}, {TileC: '#EEEED2', Piece: {Id: '', StartPosition: [0,0], color: null}}, {TileC: '#769656', Piece: {Id: '', StartPosition: [0,0], color: null}}],
+                        [{TileC: '#769656', Piece: {Id: '', StartPosition: [0,0], color: null}}, {TileC: '#EEEED2', Piece: {Id: '', StartPosition: [0,0], color: null}}, {TileC: '#769656', Piece: {Id: '', StartPosition: [0,0], color: null}}, {TileC: '#EEEED2', Piece: {Id: '', StartPosition: [0,0], color: null}}, {TileC: '#769656', Piece: {Id: '', StartPosition: [0,0], color: null}}, {TileC: '#EEEED2', Piece: {Id: '', StartPosition: [0,0], color: null}}, {TileC: '#769656', Piece: {Id: '', StartPosition: [0,0], color: null}}, {TileC: '#EEEED2', Piece: {Id: '', StartPosition: [0,0], color: null}}],
+                        [{TileC: '#EEEED2', Piece: {Id: '', StartPosition: [0,0], color: null}}, {TileC: '#769656', Piece: {Id: '', StartPosition: [0,0], color: null}}, {TileC: '#EEEED2', Piece: {Id: '', StartPosition: [0,0], color: null}}, {TileC: '#769656', Piece: {Id: '', StartPosition: [0,0], color: null}}, {TileC: '#EEEED2', Piece: {Id: '', StartPosition: [0,0], color: null}}, {TileC: '#769656', Piece: {Id: '', StartPosition: [0,0], color: null}}, {TileC: '#EEEED2', Piece: {Id: '', StartPosition: [0,0], color: null}}, {TileC: '#769656', Piece: {Id: '', StartPosition: [0,0], color: null}}],
+                        [{TileC: '#769656', Piece: {Id: '', StartPosition: [0,0], color: null}}, {TileC: '#EEEED2', Piece: {Id: '', StartPosition: [0,0], color: null}}, {TileC: '#769656', Piece: {Id: '', StartPosition: [0,0], color: null}}, {TileC: '#EEEED2', Piece: {Id: '', StartPosition: [0,0], color: null}}, {TileC: '#769656', Piece: {Id: '', StartPosition: [0,0], color: null}}, {TileC: '#EEEED2', Piece: {Id: '', StartPosition: [0,0], color: null}}, {TileC: '#769656', Piece: {Id: '', StartPosition: [0,0], color: null}}, {TileC: '#EEEED2', Piece: {Id: '', StartPosition: [0,0], color: null}}],
+                        [{TileC: '#EEEED2', Piece: {Id: 'p', StartPosition: [0,0], color: 'white'}}, {TileC: '#769656', Piece: {Id: 'p', StartPosition: [0,0], color: 'white'}}, {TileC: '#EEEED2', Piece: {Id: 'p', StartPosition: [0,0], color: 'white'}}, {TileC: '#769656', Piece: {Id: 'p', StartPosition: [0,0], color: 'white'}}, {TileC: '#EEEED2', Piece: {Id: 'p', StartPosition: [0,0], color: 'white'}}, {TileC: '#769656', Piece: {Id: 'p', StartPosition: [0,0], color: 'white'}}, {TileC: '#EEEED2', Piece: {Id: 'p', StartPosition: [0,0], color: 'white'}}, {TileC: '#769656', Piece: {Id: 'p', StartPosition: [0,0], color: 'white'}}],
+                        [{TileC: '#769656', Piece: {Id: '', StartPosition: [0,0], color: null}}, {TileC: '#EEEED2', Piece: {Id: '', StartPosition: [0,0], color: null}}, {TileC: '#769656', Piece: {Id: '', StartPosition: [0,0], color: null}}, {TileC: '#EEEED2', Piece: {Id: '', StartPosition: [0,0], color: null}}, {TileC: '#769656', Piece: {Id: '', StartPosition: [0,0], color: null}}, {TileC: '#EEEED2', Piece: {Id: '', StartPosition: [0,0], color: null}}, {TileC: '#769656', Piece: {Id: '', StartPosition: [0,0], color: null}}, {TileC: '#EEEED2', Piece: {Id: '', StartPosition: [0,0], color: null}}]]);
 
   const [boardData, setBoardData] = useState(deafultBoard);
 
@@ -25,21 +25,28 @@ export default function Home() {
     setBoardData(newBoard);
   }
 
-  function possibleMoves(position, piece){
+  function possibleMoves(position, piece, color){
     resetBoardTileColors();
     if(piece === 'p'){
-      const possibleMoves = [[position[0] - 1, position[1]], [position[0] - 2, position[1]]];
-      const updatedBoard = [...boardData]
-      possibleMoves.forEach(move => {
-        updatedBoard[move[0]][move[1]].TileC = '#BBCA41';
-      });
-      setBoardData(updatedBoard)
-    }
-    else{
-
+      if(color === 'white'){
+        const possibleMoves = [[position[0] - 1, position[1]], [position[0] - 2, position[1]]];
+        const updatedBoard = [...boardData]
+        possibleMoves.forEach(move => {
+          updatedBoard[move[0]][move[1]].TileC = '#BBCA41';
+        });
+        setBoardData(updatedBoard)
+      }
+      if(color === 'black'){
+        const possibleMoves = [[position[0] + 1, position[1]], [position[0] + 2, position[1]]];
+        const updatedBoard = [...boardData]
+        possibleMoves.forEach(move => {
+          updatedBoard[move[0]][move[1]].TileC = '#BBCA41';
+        });
+        setBoardData(updatedBoard)
+      }
     }
   }
-  
+
   return (
     <div className={styles.app}>
       {/* <Board boardData={boardData}/> */}
