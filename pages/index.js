@@ -5,14 +5,14 @@ import { useState, useEffect, useRef } from 'react'
 export default function Home() {
 
   
-  const deafultBoard =([[{TileC: '#EEEED2', moveable: false, Piece: {Id: '', StartPosition: [0,0], color: null}}, {TileC: '#769656', moveable: false, Piece: {Id: '', StartPosition: [0,0], color: null}}, {TileC: '#EEEED2', moveable: false, Piece: {Id: '', StartPosition: [0,0], color: null}}, {TileC: '#769656', moveable: false, Piece: {Id: '', StartPosition: [0,0], color: null}}, {TileC: '#EEEED2', moveable: false, Piece: {Id: '', StartPosition: [0,0], color: null}}, {TileC: '#769656', moveable: false, Piece: {Id: '', StartPosition: [0,0], color: null}}, {TileC: '#EEEED2', moveable: false, Piece: {Id: '', StartPosition: [0,0], color: null}}, {TileC: '#769656', moveable: false, Piece: {Id: '', StartPosition: [0,0], color: null}}],
+  const deafultBoard =([[{TileC: '#EEEED2', moveable: false, Piece: {Id: 'r', StartPosition: [0,0], color: null}}, {TileC: '#769656', moveable: false, Piece: {Id: 'n', StartPosition: [0,0], color: null}}, {TileC: '#EEEED2', moveable: false, Piece: {Id: 'b', StartPosition: [0,0], color: null}}, {TileC: '#769656', moveable: false, Piece: {Id: 'k', StartPosition: [0,0], color: null}}, {TileC: '#EEEED2', moveable: false, Piece: {Id: 'q', StartPosition: [0,0], color: null}}, {TileC: '#769656', moveable: false, Piece: {Id: 'b', StartPosition: [0,0], color: null}}, {TileC: '#EEEED2', moveable: false, Piece: {Id: 'n', StartPosition: [0,0], color: null}}, {TileC: '#769656', moveable: false, Piece: {Id: 'r', StartPosition: [0,0], color: null}}],
                         [{TileC: '#769656', moveable: false, Piece: {Id: 'p', StartPosition: [0,0], color: 'black'}}, {TileC: '#EEEED2', moveable: false, Piece: {Id: 'p', StartPosition: [0,0], color: 'black'}}, {TileC: '#769656', moveable: false, Piece: {Id: 'p', StartPosition: [0,0], color: 'black'}}, {TileC: '#EEEED2', moveable: false, Piece: {Id: 'p', StartPosition: [0,0], color: 'black'}}, {TileC: '#769656', moveable: false, Piece: {Id: 'p', StartPosition: [0,0], color: 'black'}}, {TileC: '#EEEED2', moveable: false, Piece: {Id: 'p', StartPosition: [0,0], color: 'black'}}, {TileC: '#769656', moveable: false, Piece: {Id: 'p', StartPosition: [0,0], color: 'black'}}, {TileC: '#EEEED2', moveable: false, Piece: {Id: 'p', StartPosition: [0,0], color: 'black'}}],
                         [{TileC: '#EEEED2', moveable: false, Piece: {Id: '', StartPosition: [0,0], color: null}}, {TileC: '#769656', moveable: false, Piece: {Id: '', StartPosition: [0,0], color: null}}, {TileC: '#EEEED2', moveable: false, Piece: {Id: '', StartPosition: [0,0], color: null}}, {TileC: '#769656', moveable: false, Piece: {Id: '', StartPosition: [0,0], color: null}}, {TileC: '#EEEED2', moveable: false, Piece: {Id: '', StartPosition: [0,0], color: null}}, {TileC: '#769656', moveable: false, Piece: {Id: '', StartPosition: [0,0], color: null}}, {TileC: '#EEEED2', moveable: false, Piece: {Id: '', StartPosition: [0,0], color: null}}, {TileC: '#769656', moveable: false, Piece: {Id: '', StartPosition: [0,0], color: null}}],
                         [{TileC: '#769656', moveable: false, Piece: {Id: '', StartPosition: [0,0], color: null}}, {TileC: '#EEEED2', moveable: false, Piece: {Id: '', StartPosition: [0,0], color: null}}, {TileC: '#769656', moveable: false, Piece: {Id: '', StartPosition: [0,0], color: null}}, {TileC: '#EEEED2', moveable: false, Piece: {Id: '', StartPosition: [0,0], color: null}}, {TileC: '#769656', moveable: false, Piece: {Id: '', StartPosition: [0,0], color: null}}, {TileC: '#EEEED2', moveable: false, Piece: {Id: '', StartPosition: [0,0], color: null}}, {TileC: '#769656', moveable: false, Piece: {Id: '', StartPosition: [0,0], color: null}}, {TileC: '#EEEED2', moveable: false, Piece: {Id: '', StartPosition: [0,0], color: null}}],
                         [{TileC: '#EEEED2', moveable: false, Piece: {Id: '', StartPosition: [0,0], color: null}}, {TileC: '#769656', moveable: false, Piece: {Id: '', StartPosition: [0,0], color: null}}, {TileC: '#EEEED2', moveable: false, Piece: {Id: '', StartPosition: [0,0], color: null}}, {TileC: '#769656', moveable: false, Piece: {Id: '', StartPosition: [0,0], color: null}}, {TileC: '#EEEED2', moveable: false, Piece: {Id: '', StartPosition: [0,0], color: null}}, {TileC: '#769656', moveable: false, Piece: {Id: '', StartPosition: [0,0], color: null}}, {TileC: '#EEEED2', moveable: false, Piece: {Id: '', StartPosition: [0,0], color: null}}, {TileC: '#769656', moveable: false, Piece: {Id: '', StartPosition: [0,0], color: null}}],
                         [{TileC: '#769656', moveable: false, Piece: {Id: '', StartPosition: [0,0], color: null}}, {TileC: '#EEEED2', moveable: false, Piece: {Id: '', StartPosition: [0,0], color: null}}, {TileC: '#769656', moveable: false, Piece: {Id: '', StartPosition: [0,0], color: null}}, {TileC: '#EEEED2', moveable: false, Piece: {Id: '', StartPosition: [0,0], color: null}}, {TileC: '#769656', moveable: false, Piece: {Id: '', StartPosition: [0,0], color: null}}, {TileC: '#EEEED2', moveable: false, Piece: {Id: '', StartPosition: [0,0], color: null}}, {TileC: '#769656', moveable: false, Piece: {Id: '', StartPosition: [0,0], color: null}}, {TileC: '#EEEED2', moveable: false, Piece: {Id: '', StartPosition: [0,0], color: null}}],
                         [{TileC: '#EEEED2', moveable: false, Piece: {Id: 'p', StartPosition: [0,0], color: 'white'}}, {TileC: '#769656', moveable: false, Piece: {Id: 'p', StartPosition: [0,0], color: 'white'}}, {TileC: '#EEEED2', moveable: false, Piece: {Id: 'p', StartPosition: [0,0], color: 'white'}}, {TileC: '#769656', moveable: false, Piece: {Id: 'p', StartPosition: [0,0], color: 'white'}}, {TileC: '#EEEED2', moveable: false, Piece: {Id: 'p', StartPosition: [0,0], color: 'white'}}, {TileC: '#769656', moveable: false, Piece: {Id: 'p', StartPosition: [0,0], color: 'white'}}, {TileC: '#EEEED2', moveable: false, Piece: {Id: 'p', StartPosition: [0,0], color: 'white'}}, {TileC: '#769656', moveable: false, Piece: {Id: 'p', StartPosition: [0,0], color: 'white'}}],
-                        [{TileC: '#769656', moveable: false, Piece: {Id: '', StartPosition: [0,0], color: null}}, {TileC: '#EEEED2', moveable: false, Piece: {Id: '', StartPosition: [0,0], color: null}}, {TileC: '#769656', moveable: false, Piece: {Id: '', StartPosition: [0,0], color: null}}, {TileC: '#EEEED2', moveable: false, Piece: {Id: '', StartPosition: [0,0], color: null}}, {TileC: '#769656', moveable: false, Piece: {Id: '', StartPosition: [0,0], color: null}}, {TileC: '#EEEED2', moveable: false, Piece: {Id: '', StartPosition: [0,0], color: null}}, {TileC: '#769656', moveable: false, Piece: {Id: '', StartPosition: [0,0], color: null}}, {TileC: '#EEEED2', moveable: false, Piece: {Id: '', StartPosition: [0,0], color: null}}]]);
+                        [{TileC: '#769656', moveable: false, Piece: {Id: 'r', StartPosition: [0,0], color: 'white'}}, {TileC: '#EEEED2', moveable: false, Piece: {Id: 'n', StartPosition: [0,0], color: 'white'}}, {TileC: '#769656', moveable: false, Piece: {Id: 'b', StartPosition: [0,0], color: 'white'}}, {TileC: '#EEEED2', moveable: false, Piece: {Id: 'q', StartPosition: [0,0], color: 'white'}}, {TileC: '#769656', moveable: false, Piece: {Id: 'k', StartPosition: [0,0], color: 'white'}}, {TileC: '#EEEED2', moveable: false, Piece: {Id: 'b', StartPosition: [0,0], color: 'white'}}, {TileC: '#769656', moveable: false, Piece: {Id: 'n', StartPosition: [0,0], color: 'white'}}, {TileC: '#EEEED2', moveable: false, Piece: {Id: 'r', StartPosition: [0,0], color: 'white'}}]]);
   
   const [boardData, setBoardData] = useState(deafultBoard);
   const [selectedPiece, setSelectedPiece ] = useState(null);
@@ -53,8 +53,16 @@ export default function Home() {
   function DisplaypossibleMoves(){
     resetMovavleTiles();
     if(selectedPiece.Id === 'p'){
+      let possibleMoves = [];
       if(selectedPiece.color === 'white'){
-        const possibleMoves = [[selectedPiecePosition[0] - 1, selectedPiecePosition[1]], [selectedPiecePosition[0] - 2, selectedPiecePosition[1]]];
+        // possibleMoves = [[selectedPiecePosition[0] - 1, selectedPiecePosition[1]], [selectedPiecePosition[0] - 2, selectedPiecePosition[1]]];
+        
+        for(let i = 1; i < 3; i++){
+          if(boardData[[selectedPiecePosition[0] - i]][[selectedPiecePosition[1]]].Piece.Id === ''){
+            possibleMoves.push([selectedPiecePosition[0] - i, selectedPiecePosition[1]]);
+          }
+        }
+
         const updatedBoard = [...boardData]
         possibleMoves.forEach(move => {
           updatedBoard[move[0]][move[1]].moveable = true;
@@ -62,13 +70,98 @@ export default function Home() {
         setBoardData(updatedBoard)
       }
       if(selectedPiece.color === 'black'){
-        const possibleMoves = [[selectedPiecePosition[0] + 1, selectedPiecePosition[1]], [selectedPiecePosition[0] + 2, selectedPiecePosition[1]]];
+        // possibleMoves = [[selectedPiecePosition[0] + 1, selectedPiecePosition[1]], [selectedPiecePosition[0] + 2, selectedPiecePosition[1]]];
+        
+        for(let i = 1; i < 3; i++){
+          if(boardData[[selectedPiecePosition[0] + i]][[selectedPiecePosition[1]]].Piece.Id === ''){
+            possibleMoves.push([selectedPiecePosition[0] + i, selectedPiecePosition[1]]);
+          }
+        }
+        
         const updatedBoard = [...boardData]
         possibleMoves.forEach(move => {
           updatedBoard[move[0]][move[1]].moveable = true;
         });
         setBoardData(updatedBoard)
       }
+    }
+    if(selectedPiece.Id === 'r'){
+      let possibleMoves = [];
+      for(let i = 0; i < 8; i++){
+        possibleMoves.push([selectedPiecePosition[0], i]);
+        possibleMoves.push([i, selectedPiecePosition[1]]);
+      }
+      const updatedBoard = [...boardData]
+      possibleMoves.forEach(move => {
+        updatedBoard[move[0]][move[1]].moveable = true;
+      });
+      setBoardData(updatedBoard)
+    }
+    if(selectedPiece.Id === 'b'){
+      const possibleMoves = [[selectedPiecePosition[0] + 1, selectedPiecePosition[1] + 1], [selectedPiecePosition[0] - 1, selectedPiecePosition[1] - 1], [selectedPiecePosition[0] + 1, selectedPiecePosition[1] - 1], [selectedPiecePosition[0] - 1, selectedPiecePosition[1] + 1]];
+      const updatedBoard = [...boardData]
+      possibleMoves.forEach(move => {
+        updatedBoard[move[0]][move[1]].moveable = true;
+      });
+      setBoardData(updatedBoard)
+    }
+    if(selectedPiece.Id === 'n'){
+      let possibleMoves = [];
+      for(let i = 0; i < 8; i++){
+        for(let j = 0; j < 8; j++){
+          if(Math.abs(selectedPiecePosition[0] - i) === 2 && Math.abs(selectedPiecePosition[1] - j) === 1){
+            possibleMoves.push([i, j]);
+          }
+          if(Math.abs(selectedPiecePosition[0] - i) === 1 && Math.abs(selectedPiecePosition[1] - j) === 2){
+            possibleMoves.push([i, j]);
+          }
+        }
+      }
+      const updatedBoard = [...boardData]
+      possibleMoves.forEach(move => {
+        updatedBoard[move[0]][move[1]].moveable = true;
+      });
+      setBoardData(updatedBoard)
+    }
+    if(selectedPiece.Id === 'k'){
+      let possibleMoves = [];
+      
+      for(let i = 0; i < 8; i++){
+        for(let j = 0; j < 8; j++){
+          if(Math.abs(selectedPiecePosition[0] - i) <= 1 && Math.abs(selectedPiecePosition[1] - j) <= 1){
+            possibleMoves.push([i, j]);
+          }
+        }
+      }
+
+      const updatedBoard = [...boardData]
+      possibleMoves.forEach(move => {
+        updatedBoard[move[0]][move[1]].moveable = true;
+      });
+      setBoardData(updatedBoard)
+    }
+    if(selectedPiece.Id === 'q'){
+      let possibleMoves = [];
+      
+      for(let i = 0; i < 8; i++){
+        for(let j = 0; j < 8; j++){
+          if(Math.abs(selectedPiecePosition[0] - i) <= 1 && Math.abs(selectedPiecePosition[1] - j) <= 1){
+            possibleMoves.push([i, j]);
+          }
+          if(Math.abs(selectedPiecePosition[0] - i) === 0 && Math.abs(selectedPiecePosition[1] - j) !== 0){
+            possibleMoves.push([i, j]);
+          }
+          if(Math.abs(selectedPiecePosition[0] - i) !== 0 && Math.abs(selectedPiecePosition[1] - j) === 0){
+            possibleMoves.push([i, j]);
+          }
+        }
+      }
+
+      const updatedBoard = [...boardData]
+      possibleMoves.forEach(move => {
+        updatedBoard[move[0]][move[1]].moveable = true;
+      });
+      setBoardData(updatedBoard)
     }
   }
 

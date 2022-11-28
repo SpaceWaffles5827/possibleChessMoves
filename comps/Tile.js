@@ -21,7 +21,6 @@ export default function Tile({value, position, selectPiece}) {
 
     return (
         <div onClick={() => handleClick()} className={styles.Tile} style={{backgroundColor: getTileColr()}}>
-            {console.log(value.moveable)}
             <ChessPiece selectPiece={selectPiece} position={position} value={value}></ChessPiece>
         </div>
     )
