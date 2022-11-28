@@ -1,8 +1,8 @@
-export default function ChessPiece({value, possibleMoves, position}) {
+export default function ChessPiece({selectPiece, value, position}) {
 
     return (
-        <div onClick={() => possibleMoves(position, value.Piece.Id, value.Piece.color)}>
-            <h1>{value.Piece.Id}</h1>
+        <div onClick={() => selectPiece(position)}>
+            <h1 style={{color: value.Piece.color}}>{value.Piece.Id}</h1>
         </div>
     )
 }

@@ -7,20 +7,14 @@ import styles from "../styles/Board.module.css";
 
 
 
-export default function Board({boardData, possibleMoves}) {
+export default function Board({boardData, selectPiece}) {
 
     return (
         <div className={styles.Board}>
-            {/* {boardData.map((row, rowIndex) => {
-                return row.map((tile, tileIndex) => {
-                    const position = [rowIndex, tileIndex];
-                    return <Tile value={tile} position={position} boardData={boardData}></Tile>
-                })
-            })} */}
             {boardData.map((row, rowIndex) => {
                 return row.map((tile, tileIndex) => {
                     const position = [rowIndex, tileIndex];
-                    return <Tile position={position} value={tile} possibleMoves={possibleMoves}></Tile>
+                    return <Tile selectPiece={selectPiece} position={position} value={tile}></Tile>
                 })
             })}
         </div>
