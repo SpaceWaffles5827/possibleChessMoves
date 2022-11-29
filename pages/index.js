@@ -5,19 +5,26 @@ import Image from 'next/image'
 
 export default function Home() {
 
-  const deafultBoard =([[{TileC: '#EEEED2', moveable: false, Piece: {Id: 'r', StartPosition: [0,0], color: 'black'}}, {TileC: '#769656', moveable: false, Piece: {Id: 'n', StartPosition: [0,0], color: 'black'}}, {TileC: '#EEEED2', moveable: false, Piece: {Id: 'b', StartPosition: [0,0], color: 'black'}}, {TileC: '#769656', moveable: false, Piece: {Id: 'k', StartPosition: [0,0], color: 'black'}}, {TileC: '#EEEED2', moveable: false, Piece: {Id: 'q', StartPosition: [0,0], color: 'black'}}, {TileC: '#769656', moveable: false, Piece: {Id: 'b', StartPosition: [0,0], color: 'black'}}, {TileC: '#EEEED2', moveable: false, Piece: {Id: 'n', StartPosition: [0,0], color: 'black'}}, {TileC: '#769656', moveable: false, Piece: {Id: 'r', StartPosition: [0,0], color: 'black'}}],
-                        [{TileC: '#769656', moveable: false, Piece: {Id: 'p', StartPosition: [0,0], color: 'black'}}, {TileC: '#EEEED2', moveable: false, Piece: {Id: 'p', StartPosition: [0,0], color: 'black'}}, {TileC: '#769656', moveable: false, Piece: {Id: 'p', StartPosition: [0,0], color: 'black'}}, {TileC: '#EEEED2', moveable: false, Piece: {Id: 'p', StartPosition: [0,0], color: 'black'}}, {TileC: '#769656', moveable: false, Piece: {Id: 'p', StartPosition: [0,0], color: 'black'}}, {TileC: '#EEEED2', moveable: false, Piece: {Id: 'p', StartPosition: [0,0], color: 'black'}}, {TileC: '#769656', moveable: false, Piece: {Id: 'p', StartPosition: [0,0], color: 'black'}}, {TileC: '#EEEED2', moveable: false, Piece: {Id: 'p', StartPosition: [0,0], color: 'black'}}],
-                        [{TileC: '#EEEED2', moveable: false, Piece: {Id: '', StartPosition: [0,0], color: null}}, {TileC: '#769656', moveable: false, Piece: {Id: '', StartPosition: [0,0], color: null}}, {TileC: '#EEEED2', moveable: false, Piece: {Id: '', StartPosition: [0,0], color: null}}, {TileC: '#769656', moveable: false, Piece: {Id: '', StartPosition: [0,0], color: null}}, {TileC: '#EEEED2', moveable: false, Piece: {Id: '', StartPosition: [0,0], color: null}}, {TileC: '#769656', moveable: false, Piece: {Id: '', StartPosition: [0,0], color: null}}, {TileC: '#EEEED2', moveable: false, Piece: {Id: '', StartPosition: [0,0], color: null}}, {TileC: '#769656', moveable: false, Piece: {Id: '', StartPosition: [0,0], color: null}}],
-                        [{TileC: '#769656', moveable: false, Piece: {Id: '', StartPosition: [0,0], color: null}}, {TileC: '#EEEED2', moveable: false, Piece: {Id: '', StartPosition: [0,0], color: null}}, {TileC: '#769656', moveable: false, Piece: {Id: '', StartPosition: [0,0], color: null}}, {TileC: '#EEEED2', moveable: false, Piece: {Id: 'p', StartPosition: [0,0], color: 'white'}}, {TileC: '#769656', moveable: false, Piece: {Id: '', StartPosition: [0,0], color: null}}, {TileC: '#EEEED2', moveable: false, Piece: {Id: '', StartPosition: [0,0], color: null}}, {TileC: '#769656', moveable: false, Piece: {Id: '', StartPosition: [0,0], color: null}}, {TileC: '#EEEED2', moveable: false, Piece: {Id: '', StartPosition: [0,0], color: null}}],
-                        [{TileC: '#EEEED2', moveable: false, Piece: {Id: '', StartPosition: [0,0], color: null}}, {TileC: '#769656', moveable: false, Piece: {Id: '', StartPosition: [0,0], color: null}}, {TileC: '#EEEED2', moveable: false, Piece: {Id: '', StartPosition: [0,0], color: null}}, {TileC: '#769656', moveable: false, Piece: {Id: 'q', StartPosition: [0,0], color: 'white'}}, {TileC: '#EEEED2', moveable: false, Piece: {Id: '', StartPosition: [0,0], color: null}}, {TileC: '#769656', moveable: false, Piece: {Id: '', StartPosition: [0,0], color: null}}, {TileC: '#EEEED2', moveable: false, Piece: {Id: '', StartPosition: [0,0], color: null}}, {TileC: '#769656', moveable: false, Piece: {Id: '', StartPosition: [0,0], color: null}}],
-                        [{TileC: '#769656', moveable: false, Piece: {Id: '', StartPosition: [0,0], color: null}}, {TileC: '#EEEED2', moveable: false, Piece: {Id: '', StartPosition: [0,0], color: null}}, {TileC: '#769656', moveable: false, Piece: {Id: '', StartPosition: [0,0], color: null}}, {TileC: '#EEEED2', moveable: false, Piece: {Id: '', StartPosition: [0,0], color: null}}, {TileC: '#769656', moveable: false, Piece: {Id: '', StartPosition: [0,0], color: null}}, {TileC: '#EEEED2', moveable: false, Piece: {Id: '', StartPosition: [0,0], color: null}}, {TileC: '#769656', moveable: false, Piece: {Id: '', StartPosition: [0,0], color: null}}, {TileC: '#EEEED2', moveable: false, Piece: {Id: '', StartPosition: [0,0], color: null}}],
-                        [{TileC: '#EEEED2', moveable: false, Piece: {Id: 'p', StartPosition: [0,0], color: 'white'}}, {TileC: '#769656', moveable: false, Piece: {Id: 'p', StartPosition: [0,0], color: 'white'}}, {TileC: '#EEEED2', moveable: false, Piece: {Id: 'p', StartPosition: [0,0], color: 'white'}}, {TileC: '#769656', moveable: false, Piece: {Id: 'p', StartPosition: [0,0], color: 'white'}}, {TileC: '#EEEED2', moveable: false, Piece: {Id: 'p', StartPosition: [0,0], color: 'white'}}, {TileC: '#769656', moveable: false, Piece: {Id: 'p', StartPosition: [0,0], color: 'white'}}, {TileC: '#EEEED2', moveable: false, Piece: {Id: 'p', StartPosition: [0,0], color: 'white'}}, {TileC: '#769656', moveable: false, Piece: {Id: 'p', StartPosition: [0,0], color: 'white'}}],
-                        [{TileC: '#769656', moveable: false, Piece: {Id: 'r', StartPosition: [0,0], color: 'white'}}, {TileC: '#EEEED2', moveable: false, Piece: {Id: 'n', StartPosition: [0,0], color: 'white'}}, {TileC: '#769656', moveable: false, Piece: {Id: 'b', StartPosition: [0,0], color: 'white'}}, {TileC: '#EEEED2', moveable: false, Piece: {Id: 'q', StartPosition: [0,0], color: 'white'}}, {TileC: '#769656', moveable: false, Piece: {Id: 'k', StartPosition: [0,0], color: 'white'}}, {TileC: '#EEEED2', moveable: false, Piece: {Id: 'b', StartPosition: [0,0], color: 'white'}}, {TileC: '#769656', moveable: false, Piece: {Id: 'n', StartPosition: [0,0], color: 'white'}}, {TileC: '#EEEED2', moveable: false, Piece: {Id: 'r', StartPosition: [0,0], color: 'white'}}]]);
+  // const whiteTileColor = '#EEEED2';
+  // const blackTileColor = '#769656';
+  const whiteTileColor = '#AACCDB';
+  const blackTileColor = '#0781D5';
+
+  const deafultBoard =([[{TileC: whiteTileColor, moveable: false, Piece: {Id: 'r', StartPosition: [0,0], color: 'black'}}, {TileC: blackTileColor, moveable: false, Piece: {Id: 'n', StartPosition: [0,0], color: 'black'}}, {TileC: whiteTileColor, moveable: false, Piece: {Id: 'b', StartPosition: [0,0], color: 'black'}}, {TileC: blackTileColor, moveable: false, Piece: {Id: 'k', StartPosition: [0,0], color: 'black'}}, {TileC: whiteTileColor, moveable: false, Piece: {Id: 'q', StartPosition: [0,0], color: 'black'}}, {TileC: blackTileColor, moveable: false, Piece: {Id: 'b', StartPosition: [0,0], color: 'black'}}, {TileC: whiteTileColor, moveable: false, Piece: {Id: 'n', StartPosition: [0,0], color: 'black'}}, {TileC: blackTileColor, moveable: false, Piece: {Id: 'r', StartPosition: [0,0], color: 'black'}}],
+                        [{TileC: blackTileColor, moveable: false, Piece: {Id: 'p', StartPosition: [0,0], color: 'black'}}, {TileC: whiteTileColor, moveable: false, Piece: {Id: 'p', StartPosition: [0,0], color: 'black'}}, {TileC: blackTileColor, moveable: false, Piece: {Id: 'p', StartPosition: [0,0], color: 'black'}}, {TileC: whiteTileColor, moveable: false, Piece: {Id: 'p', StartPosition: [0,0], color: 'black'}}, {TileC: blackTileColor, moveable: false, Piece: {Id: 'p', StartPosition: [0,0], color: 'black'}}, {TileC: whiteTileColor, moveable: false, Piece: {Id: 'p', StartPosition: [0,0], color: 'black'}}, {TileC: blackTileColor, moveable: false, Piece: {Id: 'p', StartPosition: [0,0], color: 'black'}}, {TileC: whiteTileColor, moveable: false, Piece: {Id: 'p', StartPosition: [0,0], color: 'black'}}],
+                        [{TileC: whiteTileColor, moveable: false, Piece: {Id: '', StartPosition: [0,0], color: null}}, {TileC: blackTileColor, moveable: false, Piece: {Id: '', StartPosition: [0,0], color: null}}, {TileC: whiteTileColor, moveable: false, Piece: {Id: '', StartPosition: [0,0], color: null}}, {TileC: blackTileColor, moveable: false, Piece: {Id: '', StartPosition: [0,0], color: null}}, {TileC: whiteTileColor, moveable: false, Piece: {Id: '', StartPosition: [0,0], color: null}}, {TileC: blackTileColor, moveable: false, Piece: {Id: '', StartPosition: [0,0], color: null}}, {TileC: whiteTileColor, moveable: false, Piece: {Id: '', StartPosition: [0,0], color: null}}, {TileC: blackTileColor, moveable: false, Piece: {Id: '', StartPosition: [0,0], color: null}}],
+                        [{TileC: blackTileColor, moveable: false, Piece: {Id: '', StartPosition: [0,0], color: null}}, {TileC: whiteTileColor, moveable: false, Piece: {Id: '', StartPosition: [0,0], color: null}}, {TileC: blackTileColor, moveable: false, Piece: {Id: '', StartPosition: [0,0], color: null}}, {TileC: whiteTileColor, moveable: false, Piece: {Id: 'p', StartPosition: [0,0], color: 'white'}}, {TileC: blackTileColor, moveable: false, Piece: {Id: '', StartPosition: [0,0], color: null}}, {TileC: whiteTileColor, moveable: false, Piece: {Id: '', StartPosition: [0,0], color: null}}, {TileC: blackTileColor, moveable: false, Piece: {Id: '', StartPosition: [0,0], color: null}}, {TileC: whiteTileColor, moveable: false, Piece: {Id: '', StartPosition: [0,0], color: null}}],
+                        [{TileC: whiteTileColor, moveable: false, Piece: {Id: '', StartPosition: [0,0], color: null}}, {TileC: blackTileColor, moveable: false, Piece: {Id: '', StartPosition: [0,0], color: null}}, {TileC: whiteTileColor, moveable: false, Piece: {Id: '', StartPosition: [0,0], color: null}}, {TileC: blackTileColor, moveable: false, Piece: {Id: 'q', StartPosition: [0,0], color: 'white'}}, {TileC: whiteTileColor, moveable: false, Piece: {Id: '', StartPosition: [0,0], color: null}}, {TileC: blackTileColor, moveable: false, Piece: {Id: '', StartPosition: [0,0], color: null}}, {TileC: whiteTileColor, moveable: false, Piece: {Id: '', StartPosition: [0,0], color: null}}, {TileC: blackTileColor, moveable: false, Piece: {Id: '', StartPosition: [0,0], color: null}}],
+                        [{TileC: blackTileColor, moveable: false, Piece: {Id: '', StartPosition: [0,0], color: null}}, {TileC: whiteTileColor, moveable: false, Piece: {Id: '', StartPosition: [0,0], color: null}}, {TileC: blackTileColor, moveable: false, Piece: {Id: '', StartPosition: [0,0], color: null}}, {TileC: whiteTileColor, moveable: false, Piece: {Id: '', StartPosition: [0,0], color: null}}, {TileC: blackTileColor, moveable: false, Piece: {Id: '', StartPosition: [0,0], color: null}}, {TileC: whiteTileColor, moveable: false, Piece: {Id: '', StartPosition: [0,0], color: null}}, {TileC: blackTileColor, moveable: false, Piece: {Id: '', StartPosition: [0,0], color: null}}, {TileC: whiteTileColor, moveable: false, Piece: {Id: '', StartPosition: [0,0], color: null}}],
+                        [{TileC: whiteTileColor, moveable: false, Piece: {Id: 'p', StartPosition: [0,0], color: 'white'}}, {TileC: blackTileColor, moveable: false, Piece: {Id: 'p', StartPosition: [0,0], color: 'white'}}, {TileC: whiteTileColor, moveable: false, Piece: {Id: 'p', StartPosition: [0,0], color: 'white'}}, {TileC: blackTileColor, moveable: false, Piece: {Id: 'p', StartPosition: [0,0], color: 'white'}}, {TileC: whiteTileColor, moveable: false, Piece: {Id: 'p', StartPosition: [0,0], color: 'white'}}, {TileC: blackTileColor, moveable: false, Piece: {Id: 'p', StartPosition: [0,0], color: 'white'}}, {TileC: whiteTileColor, moveable: false, Piece: {Id: 'p', StartPosition: [0,0], color: 'white'}}, {TileC: blackTileColor, moveable: false, Piece: {Id: 'p', StartPosition: [0,0], color: 'white'}}],
+                        [{TileC: blackTileColor, moveable: false, Piece: {Id: 'r', StartPosition: [0,0], color: 'white'}}, {TileC: whiteTileColor, moveable: false, Piece: {Id: 'n', StartPosition: [0,0], color: 'white'}}, {TileC: blackTileColor, moveable: false, Piece: {Id: 'b', StartPosition: [0,0], color: 'white'}}, {TileC: whiteTileColor, moveable: false, Piece: {Id: 'q', StartPosition: [0,0], color: 'white'}}, {TileC: blackTileColor, moveable: false, Piece: {Id: 'k', StartPosition: [0,0], color: 'white'}}, {TileC: whiteTileColor, moveable: false, Piece: {Id: 'b', StartPosition: [0,0], color: 'white'}}, {TileC: blackTileColor, moveable: false, Piece: {Id: 'n', StartPosition: [0,0], color: 'white'}}, {TileC: whiteTileColor, moveable: false, Piece: {Id: 'r', StartPosition: [0,0], color: 'white'}}]]);
   
   const [boardData, setBoardData] = useState(deafultBoard);
   const [selectedPiece, setSelectedPiece ] = useState(null);
   const [selectedPiecePosition, setSelectedPiecePosition ] = useState(null);
   const [ possiblePositions, setPossiblePositions ] = useState([]);
+  const [ locationOfPiecesWithPossibleMoves, setLocationOfPiecesWithPossibleMoves ] = useState([]);
+  
 
   useEffect(() => {
     if(selectedPiece !== null){
@@ -26,6 +33,7 @@ export default function Home() {
   }, [selectedPiece])
   
   function selectPiece(position, isMakingMove){
+    console.log(position)
     setSelectedPiecePosition(position);
     setSelectedPiece(boardData[[position[0]]][[position[1]]].Piece);
   }
@@ -55,8 +63,6 @@ export default function Home() {
     if(selectedPiece.Id === 'p'){
       let possibleMoves = [];
       if(selectedPiece.color === 'white'){
-        // possibleMoves = [[selectedPiecePosition[0] - 1, selectedPiecePosition[1]], [selectedPiecePosition[0] - 2, selectedPiecePosition[1]]];
-        
         for(let i = 1; i < 3; i++){
           if(boardData[[selectedPiecePosition[0] - i]][[selectedPiecePosition[1]]].Piece.Id === ''){
             possibleMoves.push([selectedPiecePosition[0] - i, selectedPiecePosition[1]]);
@@ -69,9 +75,7 @@ export default function Home() {
         });
         setBoardData(updatedBoard)
       }
-      if(selectedPiece.color === 'black'){
-        // possibleMoves = [[selectedPiecePosition[0] + 1, selectedPiecePosition[1]], [selectedPiecePosition[0] + 2, selectedPiecePosition[1]]];
-        
+      if(selectedPiece.color === 'black'){        
         for(let i = 1; i < 3; i++){
           if(boardData[[selectedPiecePosition[0] + i]][[selectedPiecePosition[1]]].Piece.Id === ''){
             possibleMoves.push([selectedPiecePosition[0] + i, selectedPiecePosition[1]]);
@@ -305,9 +309,30 @@ export default function Home() {
     }
   }
 
+  const sleep = ms => new Promise(
+    resolve => setTimeout(resolve, ms)
+  );
+
+  function loopsOverBoardData(){
+    let locationOfPiecesWithPossibleMoves = [];
+    boardData.forEach((row, rowIndex) => {
+      row.forEach((square, squareIndex) => {
+        if(square.Piece.Id !== ''){
+          locationOfPiecesWithPossibleMoves.push([rowIndex, squareIndex])
+        }
+      })
+    })
+    setLocationOfPiecesWithPossibleMoves(locationOfPiecesWithPossibleMoves)
+  }
+
   return (
     <div className={styles.app}>
+      {/* {console.log(selectedPiece)} */}
+      {console.log(locationOfPiecesWithPossibleMoves)}
       <Board boardData={boardData} selectPiece={selectPiece}/>
+      <button onClick={() => loopsOverBoardData(loopsOverBoardData)}>looper</button>
     </div>
   )
 }
+
+//create an array and a seperate loop that handles the couting than we can set state with no isues use the count as index of array

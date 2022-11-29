@@ -47,7 +47,7 @@ export default function ChessPiece({selectPiece, value, position}) {
             }
             if(value.Piece.Id === "k"){
                 return(<Image src="/images/bK.svg" height={75} width={75} />)
-            }
+            }``
             return 'error'
         }
     }
