@@ -87,22 +87,51 @@ export default function Home() {
     }
     if(selectedPiece.Id === 'r'){
       let possibleMoves = [];
-      for(let i = 0; i < 8; i++){
-        possibleMoves.push([selectedPiecePosition[0], i]);
-        possibleMoves.push([i, selectedPiecePosition[1]]);
+      
+      for(let i = 1; i < 8; i++){
+          possibleMoves.push([selectedPiecePosition[0] - i, selectedPiecePosition[1]]);
       }
+      for(let i = 1; i < 8; i++){
+          possibleMoves.push([selectedPiecePosition[0] + i, selectedPiecePosition[1]]);
+      }
+      for(let i = 1; i < 8; i++){
+          possibleMoves.push([selectedPiecePosition[0], selectedPiecePosition[1] - i]);
+      }
+      for(let i = 1; i < 8; i++){
+          possibleMoves.push([selectedPiecePosition[0], selectedPiecePosition[1] + i]);
+      }
+
+
       const updatedBoard = [...boardData]
+      
       possibleMoves.forEach(move => {
-        updatedBoard[move[0]][move[1]].moveable = true;
+        if(move[0] >= 0 && move[0] <= 7 && move[1] >= 0 && move[1] <= 7){
+          updatedBoard[move[0]][move[1]].moveable = true;
+        }
       });
+
       setBoardData(updatedBoard)
     }
     if(selectedPiece.Id === 'b'){
-      const possibleMoves = [[selectedPiecePosition[0] + 1, selectedPiecePosition[1] + 1], [selectedPiecePosition[0] - 1, selectedPiecePosition[1] - 1], [selectedPiecePosition[0] + 1, selectedPiecePosition[1] - 1], [selectedPiecePosition[0] - 1, selectedPiecePosition[1] + 1]];
+      let possibleMoves = [];
       const updatedBoard = [...boardData]
+
+      for(let i = 1; i < 8; i++){
+        if(selectedPiecePosition[0] - i >= 0 && selectedPiecePosition[1] - i >= 0){
+          possibleMoves.push([selectedPiecePosition[0] - i, selectedPiecePosition[1] - i]);
+        }
+      }
+      for(let i = 1; i < 8; i++){
+        if(selectedPiecePosition[0] - i >= 0 && selectedPiecePosition[1] + i <= 7){
+          possibleMoves.push([selectedPiecePosition[0] - i, selectedPiecePosition[1] + i]);
+        }
+      }
+
       possibleMoves.forEach(move => {
         updatedBoard[move[0]][move[1]].moveable = true;
       });
+
+
       setBoardData(updatedBoard)
     }
     if(selectedPiece.Id === 'n'){
@@ -126,40 +155,101 @@ export default function Home() {
     if(selectedPiece.Id === 'k'){
       let possibleMoves = [];
       
-      for(let i = 0; i < 8; i++){
-        for(let j = 0; j < 8; j++){
-          if(Math.abs(selectedPiecePosition[0] - i) <= 1 && Math.abs(selectedPiecePosition[1] - j) <= 1){
-            possibleMoves.push([i, j]);
-          }
+      for(let i = 1; i < 2; i++){
+        if(selectedPiecePosition[0] - i >= 0 && selectedPiecePosition[1] - i >= 0){
+          possibleMoves.push([selectedPiecePosition[0] - i, selectedPiecePosition[1] - i]);
+        }
+      }
+      for(let i = 1; i < 2; i++){
+        if(selectedPiecePosition[0] - i >= 0 && selectedPiecePosition[1] + i <= 7){
+          possibleMoves.push([selectedPiecePosition[0] - i, selectedPiecePosition[1] + i]);
+        }
+      }
+      for(let i = 1; i < 2; i++){
+        if(selectedPiecePosition[0] + i <= 7 && selectedPiecePosition[1] - i >= 0){
+          possibleMoves.push([selectedPiecePosition[0] + i, selectedPiecePosition[1] - i]);
+        }
+      }
+      for(let i = 1; i < 2; i++){
+        if(selectedPiecePosition[0] + i <= 7 && selectedPiecePosition[1] + i <= 7){
+          possibleMoves.push([selectedPiecePosition[0] + i, selectedPiecePosition[1] + i]);
+        }
+      }
+      for(let i = 1; i < 2; i++){
+        if(selectedPiecePosition[0] - i >= 0){
+          possibleMoves.push([selectedPiecePosition[0] - i, selectedPiecePosition[1]]);
+        }
+      }
+      for(let i = 1; i < 2; i++){
+        if(selectedPiecePosition[0] + i <= 7){
+          possibleMoves.push([selectedPiecePosition[0] + i, selectedPiecePosition[1]]);
+        }
+      }
+      for(let i = 1; i < 2; i++){
+        if(selectedPiecePosition[1] - i >= 0){
+          possibleMoves.push([selectedPiecePosition[0], selectedPiecePosition[1] - i]);
+        }
+      }
+      for(let i = 1; i < 2; i++){
+        if(selectedPiecePosition[1] + i <= 7){
+          possibleMoves.push([selectedPiecePosition[0], selectedPiecePosition[1] + i]);
         }
       }
 
+
       const updatedBoard = [...boardData]
+      
       possibleMoves.forEach(move => {
-        updatedBoard[move[0]][move[1]].moveable = true;
+        if(move[0] >= 0 && move[0] <= 7 && move[1] >= 0 && move[1] <= 7){
+          updatedBoard[move[0]][move[1]].moveable = true;
+        }
       });
+
       setBoardData(updatedBoard)
     }
     if(selectedPiece.Id === 'q'){
       let possibleMoves = [];
       
-      for(let i = 0; i < 8; i++){
-        for(let j = 0; j < 8; j++){
-          if(Math.abs(selectedPiecePosition[0] - i) <= 1 && Math.abs(selectedPiecePosition[1] - j) <= 1){
-            possibleMoves.push([i, j]);
-          }
-          if(Math.abs(selectedPiecePosition[0] - i) === 0 && Math.abs(selectedPiecePosition[1] - j) !== 0){
-            possibleMoves.push([i, j]);
-          }
-          if(Math.abs(selectedPiecePosition[0] - i) !== 0 && Math.abs(selectedPiecePosition[1] - j) === 0){
-            possibleMoves.push([i, j]);
-          }
+      for(let i = 1; i < 8; i++){
+          possibleMoves.push([selectedPiecePosition[0] - i, selectedPiecePosition[1]]);
+      }
+      for(let i = 1; i < 8; i++){
+          possibleMoves.push([selectedPiecePosition[0] + i, selectedPiecePosition[1]]);
+      }
+      for(let i = 1; i < 8; i++){
+          possibleMoves.push([selectedPiecePosition[0], selectedPiecePosition[1] - i]);
+      }
+      for(let i = 1; i < 8; i++){
+          possibleMoves.push([selectedPiecePosition[0], selectedPiecePosition[1] + i]);
+      }
+
+      for(let i = 1; i < 8; i++){
+        if(selectedPiecePosition[0] - i >= 0 && selectedPiecePosition[1] - i >= 0){
+          possibleMoves.push([selectedPiecePosition[0] - i, selectedPiecePosition[1] - i]);
+        }
+      }
+      for(let i = 1; i < 8; i++){
+        if(selectedPiecePosition[0] - i >= 0 && selectedPiecePosition[1] + i <= 7){
+          possibleMoves.push([selectedPiecePosition[0] - i, selectedPiecePosition[1] + i]);
+        }
+      }
+      for(let i = 1; i < 8; i++){
+        if(selectedPiecePosition[0] + i <= 7 && selectedPiecePosition[1] - i >= 0){
+          possibleMoves.push([selectedPiecePosition[0] + i, selectedPiecePosition[1] - i]);
+        }
+      }
+      for(let i = 1; i < 8; i++){
+        if(selectedPiecePosition[0] + i <= 7 && selectedPiecePosition[1] + i <= 7){
+          possibleMoves.push([selectedPiecePosition[0] + i, selectedPiecePosition[1] + i]);
         }
       }
 
       const updatedBoard = [...boardData]
+      
       possibleMoves.forEach(move => {
-        updatedBoard[move[0]][move[1]].moveable = true;
+        if(move[0] >= 0 && move[0] <= 7 && move[1] >= 0 && move[1] <= 7){
+          updatedBoard[move[0]][move[1]].moveable = true;
+        }
       });
       setBoardData(updatedBoard)
     }
