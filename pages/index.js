@@ -99,6 +99,14 @@ export default function Home() {
   }
 
   function getPossibleMovePositions(position){
+    let enemyInWayTop = false;
+    let enemyInWayBottom = false;
+    let enemyInWayLeft = false;
+    let enemyInWayRight = false;
+    let enemyInWayTopLeft = false;
+    let enemyInWayTopRight = false;
+    let enemyInWayBottomLeft = false;
+    let enemyInWayBottomRight = false;
     let possibleMoves = [];
     if(boardData[position[0]][position[1]].Piece.Id === 'p'){
         if(boardData[position[0]][position[1]].Piece.color === 'white'){
@@ -131,43 +139,56 @@ export default function Home() {
         }
       }
       else if(boardData[position[0]][position[1]].Piece.Id === 'r'){
+
         for(let i = 1; i < 8; i++){
-          if(position[0] - i >= 0){
-            if(boardData[position[0] - i][position[1]].Piece.Id === ''){
-              possibleMoves.push([position[0] - i, position[1]]);
-            }
-            else{
-              break
+          if(!enemyInWayTop){
+            if(position[0] - i >= 0){
+              if(boardData[position[0] - i][position[1]].Piece.Id === ''){
+                possibleMoves.push([position[0] - i, position[1]]);
+              }
+              else{
+                enemyInWayTop = true;
+                possibleMoves.push([position[0] - i, position[1]]);
+              }
             }
           }
         }
         for(let i = 1; i < 8; i++){
-          if(position[0] + i <= 7){
-            if(boardData[position[0] + i][position[1]].Piece.Id === ''){
-              possibleMoves.push([position[0] + i, position[1]]);
-            }
-            else{
-              break
-            }
-          }
-        }
-        for(let i = 1; i < 8; i++){
-          if(position[1] - i >= 0){
-            if(boardData[position[0]][position[1] - i].Piece.Id === ''){
-              possibleMoves.push([position[0], position[1] - i]);
-            }
-            else{
-              break
+          if(!enemyInWayBottom){
+            if(position[0] + i <= 7){
+              if(boardData[position[0] + i][position[1]].Piece.Id === ''){
+                possibleMoves.push([position[0] + i, position[1]]);
+              }
+              else{
+                enemyInWayBottom = true;
+                possibleMoves.push([position[0] + i, position[1]]);
+              }
             }
           }
         }
         for(let i = 1; i < 8; i++){
-          if(position[1] + i <= 7){
-            if(boardData[position[0]][position[1] + i].Piece.Id === ''){
-              possibleMoves.push([position[0], position[1] + i]);
+          if(!enemyInWayLeft){
+            if(position[1] - i >= 0){
+              if(boardData[position[0]][position[1] - i].Piece.Id === ''){
+                possibleMoves.push([position[0], position[1] - i]);
+              }
+              else{
+                enemyInWayLeft = true;
+                possibleMoves.push([position[0], position[1] - i]);
+              }
             }
-            else{
-              break
+          }
+        }
+        for(let i = 1; i < 8; i++){
+          if(!enemyInWayRight){
+            if(position[1] + i <= 7){
+              if(boardData[position[0]][position[1] + i].Piece.Id === ''){
+                possibleMoves.push([position[0], position[1] + i]);
+              }
+              else{
+                enemyInWayRight = true;
+                possibleMoves.push([position[0], position[1] + i]);
+              }
             }
           }
         }
@@ -265,14 +286,7 @@ export default function Home() {
         }
       }
       else if(boardData[position[0]][position[1]].Piece.Id === 'q'){
-        let enemyInWayTop = false;
-        let enemyInWayBottom = false;
-        let enemyInWayLeft = false;
-        let enemyInWayRight = false;
-        let enemyInWayTopLeft = false;
-        let enemyInWayTopRight = false;
-        let enemyInWayBottomLeft = false;
-        let enemyInWayBottomRight = false;
+
 
         for(let i = 1; i < 8; i++){
           if(!enemyInWayTop){
