@@ -121,8 +121,28 @@ export default function Home() {
               possibleMoves.push([position[0] - 1, position[1]])
             }
           }
+          if(position[0] - 1 >= 0 && position[1] - 1 >= 0 && position[0] - 1 <= 7 && position[1] - 1 <= 7 && position[1] + 1 >= 0 && position[1] + 1 <= 7){
+            if(boardData[position[0] - 1][position[1] - 1].Piece.color === 'black'){
+              possibleMoves.push([position[0] - 1, position[1] - 1])
+            }
+            if(boardData[position[0] - 1][position[1] + 1].Piece.color === 'black'){
+              possibleMoves.push([position[0] - 1, position[1] + 1])
+            }
+          }
         }
+
+        
         else{
+          if(position[0] + 1 <= 7 && position[1] - 1 >= 0 ){
+            if(position[0] + 1 <= 7 && position[1] - 1 >= 0 && position[0] + 1 <= 7 && position[1] - 1 <= 7 && position[1] + 1 >= 0 && position[1] + 1 <= 7){
+              if(boardData[position[0] + 1][position[1] - 1].Piece.color === 'white'){
+                possibleMoves.push([position[0] + 1, position[1] - 1])
+              }
+              if(boardData[position[0] + 1][position[1] + 1].Piece.color === 'white'){
+                possibleMoves.push([position[0] + 1, position[1] + 1])
+              }
+            }
+          }
           if(position[0] === 1){
             for(let i = 1; i < 3; i++){
               if(boardData[position[0] + i][position[1]].Piece.Id === ''){
@@ -136,6 +156,7 @@ export default function Home() {
             }
           }
         }
+        /////////////////////////////
       }
       else if(boardData[position[0]][position[1]].Piece.Id === 'r'){
         for(let i = 1; i < 8; i++){
