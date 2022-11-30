@@ -35,8 +35,15 @@ export default function Home() {
   }, [selectedPiece])
   
   function selectPiece(position, isMakingMove){
-    setSelectedPiecePosition(position);
-    setSelectedPiece(boardData[[position[0]]][[position[1]]].Piece);
+    if(boardData[position[0]][position[1]].moveable === true){
+      console.log('making move');
+      MoviePiece(position);
+      resetMovavleTiles(); 
+    }
+    else{
+      setSelectedPiecePosition(position);
+      setSelectedPiece(boardData[[position[0]]][[position[1]]].Piece);
+    }
   }
 
   function MoviePiece(position){
@@ -57,6 +64,7 @@ export default function Home() {
         newBoard[rowIndex][tileIndex].moveable = false;
       });
     });
+    setBoardData(newBoard);
   }
 
   function DisplaypossibleMoves(){

@@ -16,7 +16,7 @@ export default function Tile({value, position, selectPiece}) {
     }
 
     function handleClick(){
-        
+        selectPiece(position);
     }
 
     return (
