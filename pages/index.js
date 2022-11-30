@@ -13,8 +13,8 @@ export default function Home() {
   const deafultBoard =([[{TileC: whiteTileColor, moveable: false, Piece: {Id: 'r', StartPosition: [0,0], color: 'black'}}, {TileC: blackTileColor, moveable: false, Piece: {Id: 'n', StartPosition: [0,0], color: 'black'}}, {TileC: whiteTileColor, moveable: false, Piece: {Id: 'b', StartPosition: [0,0], color: 'black'}}, {TileC: blackTileColor, moveable: false, Piece: {Id: 'k', StartPosition: [0,0], color: 'black'}}, {TileC: whiteTileColor, moveable: false, Piece: {Id: 'q', StartPosition: [0,0], color: 'black'}}, {TileC: blackTileColor, moveable: false, Piece: {Id: 'b', StartPosition: [0,0], color: 'black'}}, {TileC: whiteTileColor, moveable: false, Piece: {Id: 'n', StartPosition: [0,0], color: 'black'}}, {TileC: blackTileColor, moveable: false, Piece: {Id: 'r', StartPosition: [0,0], color: 'black'}}],
                         [{TileC: blackTileColor, moveable: false, Piece: {Id: 'p', StartPosition: [0,0], color: 'black'}}, {TileC: whiteTileColor, moveable: false, Piece: {Id: 'p', StartPosition: [0,0], color: 'black'}}, {TileC: blackTileColor, moveable: false, Piece: {Id: 'p', StartPosition: [0,0], color: 'black'}}, {TileC: whiteTileColor, moveable: false, Piece: {Id: 'p', StartPosition: [0,0], color: 'black'}}, {TileC: blackTileColor, moveable: false, Piece: {Id: 'p', StartPosition: [0,0], color: 'black'}}, {TileC: whiteTileColor, moveable: false, Piece: {Id: 'p', StartPosition: [0,0], color: 'black'}}, {TileC: blackTileColor, moveable: false, Piece: {Id: 'p', StartPosition: [0,0], color: 'black'}}, {TileC: whiteTileColor, moveable: false, Piece: {Id: 'p', StartPosition: [0,0], color: 'black'}}],
                         [{TileC: whiteTileColor, moveable: false, Piece: {Id: '', StartPosition: [0,0], color: null}}, {TileC: blackTileColor, moveable: false, Piece: {Id: '', StartPosition: [0,0], color: null}}, {TileC: whiteTileColor, moveable: false, Piece: {Id: '', StartPosition: [0,0], color: null}}, {TileC: blackTileColor, moveable: false, Piece: {Id: '', StartPosition: [0,0], color: null}}, {TileC: whiteTileColor, moveable: false, Piece: {Id: '', StartPosition: [0,0], color: null}}, {TileC: blackTileColor, moveable: false, Piece: {Id: '', StartPosition: [0,0], color: null}}, {TileC: whiteTileColor, moveable: false, Piece: {Id: '', StartPosition: [0,0], color: null}}, {TileC: blackTileColor, moveable: false, Piece: {Id: '', StartPosition: [0,0], color: null}}],
-                        [{TileC: blackTileColor, moveable: false, Piece: {Id: '', StartPosition: [0,0], color: null}}, {TileC: whiteTileColor, moveable: false, Piece: {Id: '', StartPosition: [0,0], color: null}}, {TileC: blackTileColor, moveable: false, Piece: {Id: '', StartPosition: [0,0], color: null}}, {TileC: whiteTileColor, moveable: false, Piece: {Id: 'p', StartPosition: [0,0], color: 'white'}}, {TileC: blackTileColor, moveable: false, Piece: {Id: '', StartPosition: [0,0], color: null}}, {TileC: whiteTileColor, moveable: false, Piece: {Id: '', StartPosition: [0,0], color: null}}, {TileC: blackTileColor, moveable: false, Piece: {Id: '', StartPosition: [0,0], color: null}}, {TileC: whiteTileColor, moveable: false, Piece: {Id: '', StartPosition: [0,0], color: null}}],
-                        [{TileC: whiteTileColor, moveable: false, Piece: {Id: '', StartPosition: [0,0], color: null}}, {TileC: blackTileColor, moveable: false, Piece: {Id: 'r', StartPosition: [0,0], color: 'white'}}, {TileC: whiteTileColor, moveable: false, Piece: {Id: '', StartPosition: [0,0], color: null}}, {TileC: blackTileColor, moveable: false, Piece: {Id: 'q', StartPosition: [0,0], color: 'white'}}, {TileC: whiteTileColor, moveable: false, Piece: {Id: '', StartPosition: [0,0], color: null}}, {TileC: blackTileColor, moveable: false, Piece: {Id: '', StartPosition: [0,0], color: null}}, {TileC: whiteTileColor, moveable: false, Piece: {Id: '', StartPosition: [0,0], color: null}}, {TileC: blackTileColor, moveable: false, Piece: {Id: '', StartPosition: [0,0], color: null}}],
+                        [{TileC: blackTileColor, moveable: false, Piece: {Id: '', StartPosition: [0,0], color: null}}, {TileC: whiteTileColor, moveable: false, Piece: {Id: '', StartPosition: [0,0], color: null}}, {TileC: blackTileColor, moveable: false, Piece: {Id: '', StartPosition: [0,0], color: null}}, {TileC: whiteTileColor, moveable: false, Piece: {Id: 'q', StartPosition: [0,0], color: 'white'}}, {TileC: blackTileColor, moveable: false, Piece: {Id: '', StartPosition: [0,0], color: null}}, {TileC: whiteTileColor, moveable: false, Piece: {Id: '', StartPosition: [0,0], color: null}}, {TileC: blackTileColor, moveable: false, Piece: {Id: '', StartPosition: [0,0], color: null}}, {TileC: whiteTileColor, moveable: false, Piece: {Id: '', StartPosition: [0,0], color: null}}],
+                        [{TileC: whiteTileColor, moveable: false, Piece: {Id: '', StartPosition: [0,0], color: null}}, {TileC: blackTileColor, moveable: false, Piece: {Id: '', StartPosition: [0,0], color: null}}, {TileC: whiteTileColor, moveable: false, Piece: {Id: '', StartPosition: [0,0], color: null}}, {TileC: blackTileColor, moveable: false, Piece: {Id: '', StartPosition: [0,0], color: null}}, {TileC: whiteTileColor, moveable: false, Piece: {Id: '', StartPosition: [0,0], color: null}}, {TileC: blackTileColor, moveable: false, Piece: {Id: '', StartPosition: [0,0], color: null}}, {TileC: whiteTileColor, moveable: false, Piece: {Id: '', StartPosition: [0,0], color: null}}, {TileC: blackTileColor, moveable: false, Piece: {Id: '', StartPosition: [0,0], color: null}}],
                         [{TileC: blackTileColor, moveable: false, Piece: {Id: '', StartPosition: [0,0], color: null}}, {TileC: whiteTileColor, moveable: false, Piece: {Id: '', StartPosition: [0,0], color: null}}, {TileC: blackTileColor, moveable: false, Piece: {Id: '', StartPosition: [0,0], color: null}}, {TileC: whiteTileColor, moveable: false, Piece: {Id: '', StartPosition: [0,0], color: null}}, {TileC: blackTileColor, moveable: false, Piece: {Id: '', StartPosition: [0,0], color: null}}, {TileC: whiteTileColor, moveable: false, Piece: {Id: '', StartPosition: [0,0], color: null}}, {TileC: blackTileColor, moveable: false, Piece: {Id: '', StartPosition: [0,0], color: null}}, {TileC: whiteTileColor, moveable: false, Piece: {Id: '', StartPosition: [0,0], color: null}}],
                         [{TileC: whiteTileColor, moveable: false, Piece: {Id: 'p', StartPosition: [0,0], color: 'white'}}, {TileC: blackTileColor, moveable: false, Piece: {Id: 'p', StartPosition: [0,0], color: 'white'}}, {TileC: whiteTileColor, moveable: false, Piece: {Id: 'p', StartPosition: [0,0], color: 'white'}}, {TileC: blackTileColor, moveable: false, Piece: {Id: 'p', StartPosition: [0,0], color: 'white'}}, {TileC: whiteTileColor, moveable: false, Piece: {Id: 'p', StartPosition: [0,0], color: 'white'}}, {TileC: blackTileColor, moveable: false, Piece: {Id: 'p', StartPosition: [0,0], color: 'white'}}, {TileC: whiteTileColor, moveable: false, Piece: {Id: 'p', StartPosition: [0,0], color: 'white'}}, {TileC: blackTileColor, moveable: false, Piece: {Id: 'p', StartPosition: [0,0], color: 'white'}}],
                         [{TileC: blackTileColor, moveable: false, Piece: {Id: 'r', StartPosition: [0,0], color: 'white'}}, {TileC: whiteTileColor, moveable: false, Piece: {Id: 'n', StartPosition: [0,0], color: 'white'}}, {TileC: blackTileColor, moveable: false, Piece: {Id: 'b', StartPosition: [0,0], color: 'white'}}, {TileC: whiteTileColor, moveable: false, Piece: {Id: 'q', StartPosition: [0,0], color: 'white'}}, {TileC: blackTileColor, moveable: false, Piece: {Id: 'k', StartPosition: [0,0], color: 'white'}}, {TileC: whiteTileColor, moveable: false, Piece: {Id: 'b', StartPosition: [0,0], color: 'white'}}, {TileC: blackTileColor, moveable: false, Piece: {Id: 'n', StartPosition: [0,0], color: 'white'}}, {TileC: whiteTileColor, moveable: false, Piece: {Id: 'r', StartPosition: [0,0], color: 'white'}}]]);
@@ -34,13 +34,13 @@ export default function Home() {
     }
   }, [selectedPiece])
   
-  function selectPiece(position, isMakingMove){
+  function selectPiece(position){
     if(boardData[position[0]][position[1]].moveable === true){
-      console.log('making move');
       MoviePiece(position);
       resetMovavleTiles(); 
     }
     else{
+      resetMovavleTiles();
       setSelectedPiecePosition(position);
       setSelectedPiece(boardData[[position[0]]][[position[1]]].Piece);
     }
@@ -68,7 +68,6 @@ export default function Home() {
   }
 
   function DisplaypossibleMoves(){
-    resetMovavleTiles();
     let possibleMoves = getPossibleMovePositions([selectedPiecePosition[0], selectedPiecePosition[1]]);
     let newBoard = [...boardData];
 
@@ -253,83 +252,116 @@ export default function Home() {
         }
       }
       else if(boardData[position[0]][position[1]].Piece.Id === 'q'){
+        let enemyInWayTop = false;
+        let enemyInWayBottom = false;
+        let enemyInWayLeft = false;
+        let enemyInWayRight = false;
+        let enemyInWayTopLeft = false;
+        let enemyInWayTopRight = false;
+        let enemyInWayBottomLeft = false;
+        let enemyInWayBottomRight = false;
+
         for(let i = 1; i < 8; i++){
-          if(position[0] - i >= 0){
-            if(boardData[position[0] - i][position[1]].Piece.Id === ''){
-              possibleMoves.push([position[0] - i, position[1]]);
-            }
-            else{
-              break
+          if(!enemyInWayTop){
+            if(position[0] - i >= 0 ){
+              if(boardData[position[0] - i][position[1]].Piece.Id === ''){
+                  possibleMoves.push([position[0] - i, position[1]]);
+              }
+              else{
+                enemyInWayTop = true;
+                possibleMoves.push([position[0] - i, position[1]]);
+              }
             }
           }
         }
         for(let i = 1; i < 8; i++){
-          if(position[0] + i <= 7){
-            if(boardData[position[0] + i][position[1]].Piece.Id === ''){
-              possibleMoves.push([position[0] + i, position[1]]);
-            }
-            else{
-              break
-            }
-          }
-        }
-        for(let i = 1; i < 8; i++){
-          if(position[1] - i >= 0){
-            if(boardData[position[0]][position[1] - i].Piece.Id === ''){
-              possibleMoves.push([position[0], position[1] - i]);
-            }
-            else{
-              break
+          if(!enemyInWayBottom){
+            if(position[0] + i <= 7){
+              if(boardData[position[0] + i][position[1]].Piece.Id === ''){
+                possibleMoves.push([position[0] + i, position[1]]);
+              }
+              else{
+                enemyInWayBottom = true;
+                possibleMoves.push([position[0] + i, position[1]]);
+              }
             }
           }
         }
         for(let i = 1; i < 8; i++){
-          if(position[1] + i <= 7){
-            if(boardData[position[0]][position[1] + i].Piece.Id === ''){
-              possibleMoves.push([position[0], position[1] + i]);
-            }
-            else{
-              break
-            }
-          }
-        }
-        for(let i = 1; i < 8; i++){
-          if(position[0] - i >= 0 && position[1] - i >= 0){
-            if(boardData[position[0] - i][position[1] - i].Piece.Id === ''){
-              possibleMoves.push([position[0] - i, position[1] - i]);
-            }
-            else{
-              break
+          if(!enemyInWayLeft){
+            if(position[1] - i >= 0){
+              if(boardData[position[0]][position[1] - i].Piece.Id === ''){
+                possibleMoves.push([position[0], position[1] - i]);
+              }
+              else{
+                enemyInWayLeft = true;
+                possibleMoves.push([position[0], position[1] - i]);
+              }
             }
           }
         }
         for(let i = 1; i < 8; i++){
-          if(position[0] + i <= 7 && position[1] + i <= 7){
-            if(boardData[position[0] + i][position[1] + i].Piece.Id === ''){
-              possibleMoves.push([position[0] + i, position[1] + i]);
-            }
-            else{
-              break
-            }
-          }
-        }
-        for(let i = 1; i < 8; i++){
-          if(position[0] - i >= 0 && position[1] + i <= 7){
-            if(boardData[position[0] - i][position[1] + i].Piece.Id === ''){
-              possibleMoves.push([position[0] - i, position[1] + i]);
-            }
-            else{
-              break
+          if(!enemyInWayRight){
+            if(position[1] + i <= 7){
+              if(boardData[position[0]][position[1] + i].Piece.Id === ''){
+                possibleMoves.push([position[0], position[1] + i]);
+              }
+              else{
+                enemyInWayRight = true;
+                possibleMoves.push([position[0], position[1] + i]);
+              }
             }
           }
         }
         for(let i = 1; i < 8; i++){
-          if(position[0] + i <= 7 && position[1] - i >= 0){
-            if(boardData[position[0] + i][position[1] - i].Piece.Id === ''){
-              possibleMoves.push([position[0] + i, position[1] - i]);
+            if(!enemyInWayTopLeft){
+            if(position[0] - i >= 0 && position[1] - i >= 0){
+              if(boardData[position[0] - i][position[1] - i].Piece.Id === ''){
+                possibleMoves.push([position[0] - i, position[1] - i]);
+              }
+              else{
+                enemyInWayTopLeft = true;
+                possibleMoves.push([position[0] - i, position[1] - i]);
+              }
             }
-            else{
-              break
+          }
+        }
+        for(let i = 1; i < 8; i++){
+          if(!enemyInWayTopRight){
+            if(position[0] + i <= 7 && position[1] + i <= 7){
+              if(boardData[position[0] + i][position[1] + i].Piece.Id === ''){
+                possibleMoves.push([position[0] + i, position[1] + i]);
+              }
+              else{
+                enemyInWayTopRight = true;
+                possibleMoves.push([position[0] + i, position[1] + i]);
+              }
+            }
+          }
+        }
+        for(let i = 1; i < 8; i++){
+          if(!enemyInWayBottomLeft){
+            if(position[0] - i >= 0 && position[1] + i <= 7){
+              if(boardData[position[0] - i][position[1] + i].Piece.Id === ''){
+                possibleMoves.push([position[0] - i, position[1] + i]);
+              }
+              else{
+                enemyInWayBottomLeft = true;
+                possibleMoves.push([position[0] - i, position[1] + i]);
+              }
+            }
+          }
+        }
+        for(let i = 1; i < 8; i++){
+          if(!enemyInWayBottomRight){
+            if(position[0] + i <= 7 && position[1] - i >= 0){
+              if(boardData[position[0] + i][position[1] - i].Piece.Id === ''){
+                possibleMoves.push([position[0] + i, position[1] - i]);
+              }
+              else{
+                enemyInWayBottomRight = true;
+                possibleMoves.push([position[0] + i, position[1] - i]);
+              }
             }
           }
         }
@@ -382,10 +414,8 @@ export default function Home() {
 
   return (
     <div className={styles.app}>
-      {/* {console.log(locationOfPieces)} */}
       <Board boardData={boardData} selectPiece={selectPiece}/>
-      <button onClick={() => setLocationOfPiecesButton()}>looper</button>
-      {/* <button onClick={() => loopThroughAllPieces()}>loop</button> */}
+      {/* <button onClick={() => setLocationOfPiecesButton()}>looper</button> */}
     </div>
   )
 }
