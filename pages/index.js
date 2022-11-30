@@ -101,18 +101,31 @@ export default function Home() {
   function getPossibleMovePositions(position){
     let possibleMoves = [];
     if(boardData[position[0]][position[1]].Piece.Id === 'p'){
-
         if(boardData[position[0]][position[1]].Piece.color === 'white'){
-          for(let i = 1; i < 3; i++){
-            if(boardData[position[0] - i][position[1]].Piece.Id === ''){
-              possibleMoves.push([position[0] - i, position[1]])
+          if(position[0] === 6){
+            for(let i = 1; i < 3; i++){
+              if(boardData[position[0] - i][position[1]].Piece.Id === ''){
+                possibleMoves.push([position[0] - i, position[1]])
+              }
+            }
+          }
+          else{
+            if(boardData[position[0] - 1][position[1]].Piece.Id === ''){
+              possibleMoves.push([position[0] - 1, position[1]])
             }
           }
         }
         else{
-          for(let i = 1; i < 3; i++){
-            if(boardData[position[0] + i][position[1]].Piece.Id === ''){
-              possibleMoves.push([position[0] + i, position[1]])
+          if(position[0] === 1){
+            for(let i = 1; i < 3; i++){
+              if(boardData[position[0] + i][position[1]].Piece.Id === ''){
+                possibleMoves.push([position[0] + i, position[1]])
+              }
+            }
+          }
+          else{
+            if(boardData[position[0] + 1][position[1]].Piece.Id === ''){
+              possibleMoves.push([position[0] + 1, position[1]])
             }
           }
         }
